@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>آنتیک‌کست | پادکست دنیای آنتیک</title>
+
+    <meta name="description" content="آنتیک‌کست؛ پادکستی درباره دنیای آنتیک، اشیای قدیمی، اصالت، تاریخ و داستان‌های پنهان اشیا.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --background: #f4f0e8;
+            --surface: #fbf9f4;
+            --dark: #24231f;
+            --brown: #6d5138;
+            --gold: #a88752;
+            --muted: #777064;
+            --border: #ddd5c7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: var(--background);
+            color: var(--dark);
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Header */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(244, 240, 232, 0.94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        nav a {
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--brown);
+        }
+
+        /* Hero */
+
+        .hero {
+            max-width: 1150px;
+            min-height: 600px;
+            margin: auto;
+            padding: 90px 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 1.15;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 20px;
+            color: var(--muted);
+            line-height: 2;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 27px;
+            border-radius: 4px;
+            background: var(--dark);
+            color: white;
+            font-size: 14px;
+            transition: 0.25s;
+        }
+
+        .button:hover {
+            background: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 24px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 35px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+        }
+
+        .section-title span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Episodes */
+
+        .episodes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .episode {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px;
+            transition: 0.25s;
+        }
+
+        .episode:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(40, 35, 25, 0.08);
+        }
+
+        .episode-number {
+            color: var(--gold);
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .episode h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .episode p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* Gallery */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            min-height: 230px;
+            border-radius: 8px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #d8d0c2,
+                    #aaa08f
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #645c50;
+            font-size: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .gallery-item:first-child {
+            min-height: 480px;
+            grid-row: span 2;
+        }
+
+        /* About */
+
+        .about {
+            background: var(--dark);
+            color: white;
+            max-width: none;
+        }
+
+        .about-inner {
+            max-width: 1150px;
+            margin: auto;
+            padding: 85px 24px;
+        }
+
+        .about h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 750px;
+            color: #d5d0c7;
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        /* Footer */
+
+        footer {
+            max-width: 1150px;
+            margin: auto;
+            padding: 35px 24px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 750px) {
+
+            .nav {
+                padding: 15px 18px;
+            }
+
+            nav {
+                gap: 14px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 520px;
+                padding: 70px 20px;
+            }
+
+            h1 {
+                font-size: 55px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .episodes {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item,
+            .gallery-item:first-child {
+                min-height: 240px;
+                grid-row: auto;
+            }
+
+            footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+
+        <a href="#" class="logo">
+            آنتیک<span>‌کست</span>
+        </a>
+
+        <nav>
+            <a href="#episodes">اپیزودها</a>
+            <a href="#gallery">گالری</a>
+            <a href="#about">درباره آنتیک‌کست</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- Hero -->
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                PODCAST ABOUT ANTIQUES
+            </div>
+
+            <h1>آنتیک‌کست</h1>
+
+            <p>
+                پادکستی درباره دنیای آنتیک؛
+                درباره اشیایی که فقط قدیمی نیستند،
+                بلکه بخشی از تاریخ و داستان انسان‌ها را با خود حمل می‌کنند.
+            </p>
+
+            <a href="#episodes" class="button">
+                شنیدن اپیزودها
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Episodes -->
+
+    <section id="episodes">
+
+        <div class="section-title">
+
+            <h2>آخرین اپیزودها</h2>
+
+            <span>Episodes</span>
+
+        </div>
+
+
+        <div class="episodes">
+
+            <article class="episode">
+
+                <div class="episode-number">
+                    EPISODE 01
+                </div>
+
+                <h3>اصالت؛ اصل را از بدل چگونه تشخیص دهیم؟</h3>
+
+                <p>
+                    درباره اصالت اشیای قدیمی و نشانه‌هایی که می‌توانند
+                    به ما در شناخت یک شیء کمک کنند.
+                </p>
+
+            </article>
+
+
+            <article class="episode">
+
+                <div class="episode-number">
+                    EPISODE 02
+                </div>
+
+                <h3>آنتیک سرمایه است یا عشق؟</h3>
+
+                <p>
+                    وقتی یک شیء قدیمی را می‌خریم،
+                    واقعاً در حال خرید چه چیزی هستیم؟
+                </p>
+
+            </article>
+
+
+            <article class="episode">
+
+                <div class="episode-number">
+                    EPISODE 03
+                </div>
+
+                <h3>آنتیک و اخلاق</h3>
+
+                <p>
+                    در دنیای خرید و فروش اشیای قدیمی،
+                    مرز میان ارزش، منفعت و اخلاق کجاست؟
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery -->
+
+    <section id="gallery">
+
+        <div class="section-title">
+
+            <h2>گالری</h2>
+
+            <span>Objects & Stories</span>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                تصویر اصلی گالری
+            </div>
+
+            <div class="gallery-item">
+                شیء قدیمی
+            </div>
+
+            <div class="gallery-item">
+                جزئیات یک شیء
+            </div>
+
+            <div class="gallery-item">
+                اثر تاریخی
+            </div>
+
+            <div class="gallery-item">
+                اشیای آنتیک
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <div class="about" id="about">
+
+        <div class="about-inner">
+
+            <h2>درباره آنتیک‌کست</h2>
+
+            <p>
+                آنتیک‌کست درباره دنیای اشیای قدیمی است؛
+                درباره تاریخ، اصالت، ارزش و داستان‌هایی که
+                در پشت یک شیء پنهان شده‌اند.
+                اینجا قرار است اشیا را فقط به عنوان کالا نبینیم،
+                بلکه آنها را بخشی از گذشته بدانیم.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 آنتیک‌کست
+    </div>
+
+    <div>
+        پادکستی درباره دنیای آنتیک
+    </div>
+
+</footer>
+
+</body>
+</html>
