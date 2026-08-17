@@ -101,7 +101,7 @@
         }
 
         .hero-content {
-            max-width: 760px;
+            max-width: 780px;
         }
 
         .eyebrow {
@@ -120,7 +120,7 @@
         }
 
         .hero p {
-            max-width: 650px;
+            max-width: 680px;
             font-size: 20px;
             color: var(--muted);
             line-height: 2;
@@ -172,15 +172,15 @@
 
         .episodes {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
         }
 
         .episode {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 25px;
+            padding: 24px;
             transition: 0.25s;
         }
 
@@ -191,19 +191,32 @@
 
         .episode-number {
             color: var(--gold);
-            font-size: 13px;
+            font-size: 12px;
+            font-weight: 600;
             margin-bottom: 12px;
         }
 
         .episode h3 {
-            font-size: 20px;
+            font-size: 19px;
+            line-height: 1.7;
             margin-bottom: 12px;
         }
 
         .episode p {
             color: var(--muted);
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .episode-link {
+            color: var(--brown);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .episode-link:hover {
+            color: var(--gold);
         }
 
         /* Gallery */
@@ -217,12 +230,11 @@
         .gallery-item {
             min-height: 230px;
             border-radius: 8px;
-            background:
-                linear-gradient(
-                    135deg,
-                    #d8d0c2,
-                    #aaa08f
-                );
+            background: linear-gradient(
+                135deg,
+                #d8d0c2,
+                #aaa08f
+            );
             display: flex;
             align-items: center;
             justify-content: center;
@@ -275,9 +287,18 @@
             font-size: 13px;
         }
 
+        /* Tablet */
+
+        @media (max-width: 1000px) {
+
+            .episodes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         /* Mobile */
 
-        @media (max-width: 750px) {
+        @media (max-width: 650px) {
 
             .nav {
                 padding: 15px 18px;
@@ -330,9 +351,10 @@
 <body>
 
 <header>
+
     <div class="nav">
 
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             آنتیک<span>‌کست</span>
         </a>
 
@@ -343,6 +365,7 @@
         </nav>
 
     </div>
+
 </header>
 
 
@@ -366,8 +389,8 @@
                 بلکه بخشی از تاریخ و داستان انسان‌ها را با خود حمل می‌کنند.
             </p>
 
-            <a href="#episodes" class="button">
-                شنیدن اپیزودها
+            <a href="episodes.html" class="button">
+                مشاهده اپیزودها
             </a>
 
         </div>
@@ -383,12 +406,15 @@
 
             <h2>آخرین اپیزودها</h2>
 
-            <span>Episodes</span>
+            <span>Latest Episodes</span>
 
         </div>
 
 
         <div class="episodes">
+
+
+            <!-- Episode 01 -->
 
             <article class="episode">
 
@@ -396,15 +422,23 @@
                     EPISODE 01
                 </div>
 
-                <h3>اصالت؛ اصل را از بدل چگونه تشخیص دهیم؟</h3>
+                <h3>
+                    عتیقه یا آنتیک؟
+                </h3>
 
                 <p>
-                    درباره اصالت اشیای قدیمی و نشانه‌هایی که می‌توانند
-                    به ما در شناخت یک شیء کمک کنند.
+                    آنتیک چیست و چه تفاوتی با عتیقه دارد؟
+                    شروع آنتیک‌کست با شناخت مفاهیم پایه دنیای اشیای قدیمی.
                 </p>
+
+                <a href="episode-01.html" class="episode-link">
+                    مشاهده اپیزود ←
+                </a>
 
             </article>
 
+
+            <!-- Episode 02 -->
 
             <article class="episode">
 
@@ -412,15 +446,23 @@
                     EPISODE 02
                 </div>
 
-                <h3>آنتیک سرمایه است یا عشق؟</h3>
+                <h3>
+                    اولین خرید آنتیک
+                </h3>
 
                 <p>
-                    وقتی یک شیء قدیمی را می‌خریم،
-                    واقعاً در حال خرید چه چیزی هستیم؟
+                    اگر برای اولین بار می‌خواهید یک شیء آنتیک بخرید،
+                    چه چیزهایی را باید بدانید؟
                 </p>
+
+                <a href="episode-02.html" class="episode-link">
+                    مشاهده اپیزود ←
+                </a>
 
             </article>
 
+
+            <!-- Episode 03 -->
 
             <article class="episode">
 
@@ -428,14 +470,45 @@
                     EPISODE 03
                 </div>
 
-                <h3>آنتیک و اخلاق</h3>
+                <h3>
+                    چگونه اصل رو از بدل تشخیص بدیم
+                </h3>
 
                 <p>
-                    در دنیای خرید و فروش اشیای قدیمی،
-                    مرز میان ارزش، منفعت و اخلاق کجاست؟
+                    نشانه‌ها و روش‌هایی برای بررسی اصالت
+                    و تشخیص بهتر یک شیء قدیمی.
                 </p>
 
+                <a href="episode-03.html" class="episode-link">
+                    مشاهده اپیزود ←
+                </a>
+
             </article>
+
+
+            <!-- Episode 04 -->
+
+            <article class="episode">
+
+                <div class="episode-number">
+                    EPISODE 04
+                </div>
+
+                <h3>
+                    آنتیک و اخلاق
+                </h3>
+
+                <p>
+                    درباره مرز میان ارزش، منفعت و اخلاق
+                    در دنیای خرید و فروش اشیای قدیمی.
+                </p>
+
+                <a href="episode-04.html" class="episode-link">
+                    مشاهده اپیزود ←
+                </a>
+
+            </article>
+
 
         </div>
 
