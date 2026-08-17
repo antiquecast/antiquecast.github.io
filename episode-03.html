@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>چگونه اصل رو از بدل تشخیص بدیم | آنتیک‌کست</title>
+
+    <meta name="description" content="قسمت سوم آنتیک‌کست؛ چگونه اصل رو از بدل تشخیص بدیم.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --background: #f4f0e8;
+            --surface: #fbf9f4;
+            --dark: #24231f;
+            --brown: #6d5138;
+            --gold: #a88752;
+            --muted: #777064;
+            --border: #ddd5c7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: var(--background);
+            color: var(--dark);
+            line-height: 2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: rgba(244, 240, 232, 0.96);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            max-width: 1050px;
+            margin: auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--brown);
+        }
+
+        .episode-page {
+            max-width: 850px;
+            margin: auto;
+            padding: 80px 24px 100px;
+        }
+
+        .back {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 13px;
+            margin-bottom: 45px;
+        }
+
+        .back:hover {
+            color: var(--brown);
+        }
+
+        .episode-number {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 70px);
+            line-height: 1.3;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .intro {
+            font-size: 19px;
+            color: var(--muted);
+            margin-bottom: 45px;
+        }
+
+        .cover {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #d8d0c2, #aaa08f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #645c50;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .player {
+            background: var(--dark);
+            color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 55px;
+        }
+
+        .player-title {
+            font-size: 14px;
+            color: #ddd6ca;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 45px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .content h3 {
+            font-size: 21px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #555047;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            max-width: 850px;
+            margin: auto;
+            padding: 35px 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+
+            .nav {
+                padding: 15px 18px;
+            }
+
+            nav {
+                gap: 13px;
+                font-size: 12px;
+            }
+
+            .episode-page {
+                padding: 60px 20px 70px;
+            }
+
+            h1 {
+                font-size: 48px;
+                letter-spacing: -2px;
+            }
+
+            .content {
+                padding: 28px 22px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="nav">
+
+        <a href="index.html" class="logo">
+            آنتیک<span>‌کست</span>
+        </a>
+
+        <nav>
+            <a href="index.html">صفحه اصلی</a>
+            <a href="episodes.html">اپیزودها</a>
+            <a href="index.html#gallery">گالری</a>
+            <a href="index.html#about">درباره</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <article class="episode-page">
+
+        <a href="episodes.html" class="back">
+            ← بازگشت به اپیزودها
+        </a>
+
+        <div class="episode-number">
+            EPISODE 03
+        </div>
+
+        <h1>
+            چگونه اصل رو از بدل تشخیص بدیم
+        </h1>
+
+        <p class="intro">
+            یک شیء قدیمی ممکن است در نگاه اول اصیل به نظر برسد،
+            اما ظاهر همیشه همه چیز را نمی‌گوید.
+            تشخیص اصالت نیاز به دقت، شناخت و بررسی دارد.
+        </p>
+
+        <div class="cover">
+            تصویر قسمت
+        </div>
+
+        <div class="player">
+
+            <div class="player-title">
+                شنیدن قسمت
+            </div>
+
+            <audio controls>
+                <source src="" type="audio/mpeg">
+                مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+            </audio>
+
+        </div>
+
+        <div class="content">
+
+            <h2>
+                درباره این قسمت
+            </h2>
+
+            <p>
+                در بازار آنتیک، تشخیص اصل از بدل یکی از مهم‌ترین
+                موضوعاتی است که هر علاقه‌مند به اشیای قدیمی
+                باید با آن آشنا شود.
+            </p>
+
+            <p>
+                یک شیء می‌تواند قدیمی باشد اما ارزش و اصالت
+                مورد انتظار ما را نداشته باشد. از طرف دیگر،
+                برخی بدل‌ها با دقت زیادی ساخته می‌شوند و
+                ممکن است در نگاه اول کاملاً قابل اعتماد به نظر برسند.
+            </p>
+
+            <h3>
+                در این قسمت می‌شنوید
+            </h3>
+
+            <p>
+                هنگام بررسی یک شیء قدیمی به چه نشانه‌هایی توجه کنیم،
+                چرا فقط ظاهر یک شیء کافی نیست و چگونه می‌توانیم
+                با دقت بیشتری درباره اصالت آن تصمیم بگیریم.
+            </p>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <div>
+        © 2026 آنتیک‌کست
+    </div>
+
+    <div>
+        پادکستی درباره دنیای آنتیک
+    </div>
+
+</footer>
+
+</body>
+</html>
