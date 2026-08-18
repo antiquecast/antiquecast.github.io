@@ -403,10 +403,18 @@
             }
 
             footer {
-            flex-direction: column-reverse;
-            align-items: center;
-            text-align: center;
-            gap: 5px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 5px;
+            }
+            
+            footer div:first-child {
+                order: 2;
+            }
+            
+            footer div:last-child {
+                order: 1;
             }
         }
     </style>
